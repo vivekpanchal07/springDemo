@@ -15,6 +15,12 @@ public class App
 //        Student sobj = (Student)ac.getBean("studentBean");
           Student sobj = ac.getBean("studentBean",Student.class);
         System.out.println(sobj);
+
+        //by using constructor D.I.
+        Employee e1 = (Employee)ac.getBean("employeeBean");
+        e1.show();
+
         ((AbstractApplicationContext)ac).close();
+
     }
 }

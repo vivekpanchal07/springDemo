@@ -11,4 +11,14 @@
     <bean id="studentBean" class="org.example.Student" init-method="init" destroy-method="destroy">
         <property name="id" value="101"/>
     </bean>
+    <bean id="employeeBean" class="org.example.Employee" >
+        <constructor-arg value="101" type="int"/>
+        <constructor-arg >
+            <ref bean="addressBean" />
+        </constructor-arg>
+    </bean>
+    <bean id="addressBean" class="org.example.Address">
+        <constructor-arg value="1234" type="int"/>
+        <constructor-arg value="abad" type="String"/>
+    </bean>
 </beans>
